@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, cubicBezier } from 'framer-motion';
 
 interface SplitTextProps {
   text: string;
@@ -23,7 +23,6 @@ interface SplitTextProps {
     scale?: number;
   };
   threshold?: number;
-  rootMargin?: string;
   textAlign?: 'left' | 'center' | 'right';
   onLetterAnimationComplete?: () => void;
 }
@@ -38,7 +37,6 @@ const SplitText: React.FC<SplitTextProps> = ({
   from = { opacity: 0, y: 40 },
   to = { opacity: 1, y: 0 },
   threshold = 0.1,
-  rootMargin = '-100px',
   textAlign = 'center',
   onLetterAnimationComplete
 }) => {
@@ -56,13 +54,13 @@ const SplitText: React.FC<SplitTextProps> = ({
   const getEasing = (easeString: string) => {
     switch (easeString) {
       case 'power3.out':
-        return [0.215, 0.61, 0.355, 1];
+        return cubicBezier(0.215, 0.61, 0.355, 1);
       case 'power2.out':
-        return [0.25, 0.46, 0.45, 0.94];
+        return cubicBezier(0.25, 0.46, 0.45, 0.94);
       case 'power4.out':
-        return [0.165, 0.84, 0.44, 1];
+        return cubicBezier(0.165, 0.84, 0.44, 1);
       default:
-        return [0.215, 0.61, 0.355, 1];
+        return cubicBezier(0.215, 0.61, 0.355, 1);
     }
   };
 

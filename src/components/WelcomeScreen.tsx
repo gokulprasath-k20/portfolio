@@ -78,7 +78,6 @@ export function WelcomeScreen({ onComplete }: WelcomeScreenProps) {
                 from={{ opacity: 0, y: 60, scale: 0.8 }}
                 to={{ opacity: 1, y: 0, scale: 1 }}
                 threshold={0.1}
-                rootMargin="-50px"
                 textAlign="center"
                 onLetterAnimationComplete={handleAnimationComplete}
               />
