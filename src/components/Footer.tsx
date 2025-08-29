@@ -46,7 +46,7 @@ export function Footer() {
             </h3>
             <p className="text-foreground/70 leading-relaxed">
               Building digital experiences that make a difference. 
-              Let's create something amazing together.
+              Let&apos;s create something amazing together.
             </p>
           </motion.div>
 

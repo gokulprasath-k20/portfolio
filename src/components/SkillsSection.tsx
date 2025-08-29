@@ -37,7 +37,7 @@ export function SkillsSection() {
             My <span className="text-primary">Skills</span>
           </h2>
           <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
-            Technologies and tools I use to bring ideas to life. I'm always learning 
+            Technologies and tools I use to bring ideas to life. I&apos;m always learning 
             and exploring new technologies to stay current with industry trends.
           </p>
         </motion.div>

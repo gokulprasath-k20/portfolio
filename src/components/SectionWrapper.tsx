@@ -6,14 +6,12 @@ import { cn } from '@/lib/utils';
 interface SectionWrapperProps {
   children: ReactNode;
   className?: string;
-  darkPattern?: boolean;
   id?: string;
 }
 
 export function SectionWrapper({ 
   children, 
   className = '',
-  darkPattern = false,
   id
 }: SectionWrapperProps) {
   return (

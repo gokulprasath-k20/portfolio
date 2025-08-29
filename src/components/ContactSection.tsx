@@ -93,8 +93,8 @@ export function ContactSection() {
             Get In <span className="text-primary">Touch</span>
           </h2>
           <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
-            I'm always interested in new opportunities and interesting projects. 
-            Let's discuss how we can work together!
+            I&apos;m always interested in new opportunities and interesting projects. 
+            Let&apos;s discuss how we can work together!
           </p>
         </motion.div>
 
@@ -111,7 +111,7 @@ export function ContactSection() {
               <h3 className="text-2xl font-bold mb-6">Let's Connect</h3>
               <p className="text-foreground/70 leading-relaxed mb-8">
                 Whether you have a project in mind, want to discuss opportunities, 
-                or just want to say hello, I'd love to hear from you. Feel free to 
+                or just want to say hello, I&apos;d love to hear from you. Feel free to 
                 reach out through any of the channels below.
               </p>
             </div>
@@ -190,7 +190,7 @@ export function ContactSection() {
               >
                 <CheckCircle size={64} className="text-green-500 mx-auto mb-4" />
                 <h4 className="text-xl font-bold mb-2">Message Sent!</h4>
-                <p className="text-foreground/70">Thank you for reaching out. I'll get back to you soon.</p>
+                <p className="text-foreground/70">Thank you for reaching out. I&apos;ll get back to you soon.</p>
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -239,7 +239,7 @@ export function ContactSection() {
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 bg-accent border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
-                    placeholder="What's this about?"
+                    placeholder="What&apos;s this about?"
                   />
                 </div>
                 

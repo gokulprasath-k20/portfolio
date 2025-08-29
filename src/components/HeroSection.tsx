@@ -3,14 +3,9 @@
 import { motion } from 'framer-motion';
 import { ArrowDown, Download, Github, Linkedin, Mail } from 'lucide-react';
 import { portfolioData } from '@/data/portfolio';
-import SplitText from './SplitText';
 
 export function HeroSection() {
   const { personal, contact } = portfolioData;
-
-  const handleAnimationComplete = () => {
-    console.log('All letters have animated!');
-  };
 
   const handleDownloadResume = () => {
     // You can replace this with actual resume download logic

@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, Eye } from 'lucide-react';
 import { portfolioData } from '@/data/portfolio';
-import { cn } from '@/lib/utils';
 import { SectionWrapper } from './SectionWrapper';
 
 export function ProjectsSection() {
@@ -23,7 +22,7 @@ export function ProjectsSection() {
             My <span className="text-primary">Projects</span>
           </h2>
           <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
-            Here are some of the projects I've worked on. Each one represents a unique 
+            Here are some of the projects I&apos;ve worked on. Each one represents a unique 
             challenge and learning opportunity.
           </p>
         </motion.div>
