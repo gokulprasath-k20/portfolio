@@ -19,7 +19,7 @@ export function BackgroundWrapper({
       <div 
         className="fixed inset-0 -z-20 bg-cover bg-center bg-no-repeat bg-attachment-fixed"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`,
+          backgroundImage: `url('https://i.pinimg.com/564x/15/24/18/152418768633740511.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ArrowDown, Download, Github, Linkedin, Mail } from 'lucide-react';
+import Image from 'next/image';
 import { portfolioData } from '@/data/portfolio';
 
 export function HeroSection() {
@@ -68,8 +69,15 @@ export function HeroSection() {
             className="mb-8"
           >
             <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full bg-gradient-to-r from-primary to-purple-600 p-1">
-              <div className="w-full h-full rounded-full bg-background flex items-center justify-center text-4xl md:text-5xl font-bold text-primary">
-                {personal.name.split(' ').map(n => n[0]).join('')}
+              <div className="w-full h-full rounded-full overflow-hidden">
+                <Image 
+                  src={personal.avatar} 
+                  alt={personal.name}
+                  width={160}
+                  height={160}
+                  className="w-full h-full object-cover rounded-full"
+                  priority
+                />
               </div>
             </div>
           </motion.div>
