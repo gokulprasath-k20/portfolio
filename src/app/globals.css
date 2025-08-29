@@ -4,13 +4,13 @@
 :root {
   --background: 0 0% 100%;
   --background-rgb: 255 255 255;
-  --foreground: 215 28% 17%;
+  --foreground: 0 0% 100%;
   --primary: 217 91% 60%;
-  --primary-foreground: 0 0% 98%;
+  --primary-foreground: 0 0% 100%;
   --secondary: 210 40% 96%;
-  --secondary-foreground: 215 25% 27%;
+  --secondary-foreground: 0 0% 100%;
   --accent: 210 40% 94%;
-  --accent-foreground: 215 16% 47%;
+  --accent-foreground: 0 0% 100%;
   --border: 214 32% 91%;
   --ring: 217 91% 60%;
 }
@@ -26,13 +26,13 @@
   :root {
     --background: 222 84% 5%;
     --background-rgb: 15 15 15;
-    --foreground: 210 40% 98%;
+    --foreground: 0 0% 100%;
     --primary: 217 91% 60%;
-    --primary-foreground: 210 40% 98%;
+    --primary-foreground: 0 0% 100%;
     --secondary: 215 28% 17%;
-    --secondary-foreground: 210 20% 82%;
+    --secondary-foreground: 0 0% 100%;
     --accent: 215 25% 27%;
-    --accent-foreground: 210 40% 94%;
+    --accent-foreground: 0 0% 100%;
     --border: 215 25% 27%;
     --ring: 217 91% 60%;
   }
@@ -40,9 +40,62 @@
 
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: white;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   line-height: 1.6;
+}
+
+/* Force all text to be white */
+* {
+  color: white !important;
+}
+
+/* Ensure headings are white */
+h1, h2, h3, h4, h5, h6 {
+  color: white !important;
+}
+
+/* Ensure paragraphs and spans are white */
+p, span, div, a, li, label {
+  color: white !important;
+}
+
+/* Ensure button text is white */
+button {
+  color: white !important;
+}
+
+/* Override Tailwind text color classes */
+.text-foreground,
+.text-foreground\/70,
+.text-foreground\/80,
+.text-foreground\/60,
+.text-muted-foreground {
+  color: white !important;
+}
+
+/* Override any other text color classes */
+[class*="text-"] {
+  color: white !important;
+}
+
+/* Ensure SVG icons are white */
+svg {
+  color: white !important;
+}
+
+/* Special handling for gradient text - keep gradients but ensure fallback */
+.bg-clip-text.text-transparent {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Fallback for gradient text if gradient fails */
+@supports not (background-clip: text) {
+  .bg-clip-text.text-transparent {
+    color: white !important;
+  }
 }
 
 /* Smooth scrolling */

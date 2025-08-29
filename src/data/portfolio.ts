@@ -5,7 +5,7 @@ export const portfolioData = {
     name: "Gokulprasath",
     title: "Full Stack Developer",
     bio: "I'm a passionate full-stack developer with expertise in modern web technologies. I love creating beautiful, functional applications that solve real-world problems.",
-    avatar: "/avatar.jpg",
+    avatar: "/profile.jpg",
     resumeUrl: "/resume.pdf"
   },
 
