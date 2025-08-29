@@ -1,0 +1,76 @@
+/* Section Background Patterns */
+.section-dark-pattern {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.section-dark-pattern::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(135deg, transparent 48%, rgba(255, 255, 255, 0.02) 49%, rgba(255, 255, 255, 0.02) 51%, transparent 52%),
+    linear-gradient(45deg, transparent 48%, rgba(255, 255, 255, 0.02) 49%, rgba(255, 255, 255, 0.02) 51%, transparent 52%);
+  background-size: 100px 100px, 150px 150px, 80px 80px, 60px 60px;
+  opacity: 0.4;
+}
+
+.section-dark-pattern::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    conic-gradient(from 180deg at 50% 50%, transparent 0deg, rgba(255, 255, 255, 0.02) 90deg, transparent 180deg, rgba(255, 255, 255, 0.02) 270deg, transparent 360deg),
+    radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.03) 0%, transparent 70%),
+    radial-gradient(ellipse at 0% 50%, rgba(255, 255, 255, 0.02) 0%, transparent 70%),
+    radial-gradient(ellipse at 100% 50%, rgba(255, 255, 255, 0.02) 0%, transparent 70%);
+  background-size: 400px 400px, 600px 300px, 300px 600px, 300px 600px;
+  opacity: 0.3;
+  animation: subtle-float 20s ease-in-out infinite;
+}
+
+@keyframes subtle-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-10px) rotate(1deg); }
+  66% { transform: translateY(5px) rotate(-0.5deg); }
+}
+
+/* Curved Line Pattern Overlay */
+.curved-lines-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+  background-image: 
+    radial-gradient(ellipse 800px 400px at 0% 50%, transparent 40%, rgba(255, 255, 255, 0.05) 50%, transparent 60%),
+    radial-gradient(ellipse 600px 300px at 100% 20%, transparent 40%, rgba(255, 255, 255, 0.03) 50%, transparent 60%),
+    radial-gradient(ellipse 500px 250px at 50% 100%, transparent 40%, rgba(255, 255, 255, 0.04) 50%, transparent 60%);
+  background-size: 100% 100%;
+  animation: flow-pattern 15s ease-in-out infinite;
+}
+
+@keyframes flow-pattern {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.02) rotate(0.5deg); }
+}
+
+/* Section with enhanced contrast */
+.dark-section {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dark-section .text-foreground {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.dark-section .text-foreground\/70 {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.dark-section .text-foreground\/60 {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
