@@ -108,7 +108,7 @@ export function ContactSection() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold mb-6">Let's Connect</h3>
+              <h3 className="text-2xl font-bold mb-6">Let&apos;s Connect</h3>
               <p className="text-foreground/70 leading-relaxed mb-8">
                 Whether you have a project in mind, want to discuss opportunities, 
                 or just want to say hello, I&apos;d love to hear from you. Feel free to 

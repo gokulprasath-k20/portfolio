@@ -44,8 +44,7 @@ const SplitText: React.FC<SplitTextProps> = ({
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { 
-    threshold, 
-    margin: rootMargin 
+    amount: threshold
   });
   const [animationComplete, setAnimationComplete] = useState(false);
 
