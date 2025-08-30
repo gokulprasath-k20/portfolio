@@ -76,11 +76,11 @@ export function Navigation() {
               e.preventDefault();
               handleNavClick('#home');
             }}
-            className="text-2xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent"
+            className="text-2xl font-bold text-white hover:text-primary transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Portfolio
+            My Portfolio
           </motion.a>
 
           {/* Desktop Navigation */}

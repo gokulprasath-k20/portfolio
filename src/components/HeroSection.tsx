@@ -98,7 +98,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-2xl md:text-3xl font-semibold text-foreground/80 mb-6"
+            className="text-2xl md:text-3xl font-semibold text-white mb-6"
           >
             {personal.title}
           </motion.h2>
@@ -108,7 +108,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-lg md:text-xl text-foreground/70 mb-12 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-white/80 mb-12 max-w-3xl mx-auto leading-relaxed"
           >
             {personal.bio}
           </motion.p>
@@ -181,7 +181,7 @@ export function HeroSection() {
             onClick={() => {
               document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="flex flex-col items-center gap-2 text-foreground/60 hover:text-primary transition-colors"
+            className="flex flex-col items-center gap-2 text-white/70 hover:text-primary transition-colors"
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
