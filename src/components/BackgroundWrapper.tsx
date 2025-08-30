@@ -15,14 +15,11 @@ export function BackgroundWrapper({
 }: BackgroundWrapperProps) {
   return (
     <div className="relative min-h-screen">
-      {/* Background Pattern */}
-      <div className="portfolio-background fixed inset-0 -z-20" />
-      
       {/* Dark Overlay for better text readability */}
       {overlay && (
         <div 
-          className="fixed inset-0 -z-10 bg-background/80 backdrop-blur-sm"
-          style={{ backgroundColor: `rgba(var(--background-rgb, 0 0 0) / ${overlayOpacity})` }}
+          className="fixed inset-0 -z-10 bg-background/20 backdrop-blur-sm"
+          style={{ backgroundColor: `rgba(var(--background-rgb, 0 0 0) / ${overlayOpacity * 0.3})` }}
         />
       )}
       
