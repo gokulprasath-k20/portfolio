@@ -28,29 +28,20 @@ export function WelcomeScreen({ onComplete }: WelcomeScreenProps) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0, scale: 0.95 }}
           transition={{ duration: 0.8 }}
-          className="fixed inset-0 z-50 flex items-center justify-center"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black"
         >
-          {/* Background Image */}
-          <div 
-            className="absolute inset-0 -z-20 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: `url('https://i.pinimg.com/564x/15/24/18/152418768633740511.jpg')`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center'
-            }}
-          />
+          {/* Full Black Background */}
+          <div className="absolute inset-0 bg-black" />
           
-          {/* Dark Overlay */}
-          <div className="absolute inset-0 -z-10 bg-background/90 backdrop-blur-sm" />
           {/* Subtle Animation Overlay */}
           <motion.div
-            className="absolute inset-0 -z-5 opacity-20"
+            className="absolute inset-0 -z-5 opacity-10"
             animate={{
               background: [
-                "radial-gradient(600px circle at 0% 0%, rgba(59, 130, 246, 0.2), transparent 70%)",
-                "radial-gradient(600px circle at 100% 100%, rgba(139, 92, 246, 0.2), transparent 70%)",
-                "radial-gradient(600px circle at 0% 100%, rgba(6, 182, 212, 0.2), transparent 70%)",
-                "radial-gradient(600px circle at 100% 0%, rgba(16, 185, 129, 0.2), transparent 70%)",
+                "radial-gradient(600px circle at 0% 0%, rgba(59, 130, 246, 0.1), transparent 70%)",
+                "radial-gradient(600px circle at 100% 100%, rgba(139, 92, 246, 0.1), transparent 70%)",
+                "radial-gradient(600px circle at 0% 100%, rgba(6, 182, 212, 0.1), transparent 70%)",
+                "radial-gradient(600px circle at 100% 0%, rgba(16, 185, 129, 0.1), transparent 70%)",
               ]
             }}
             transition={{

@@ -15,16 +15,8 @@ export function BackgroundWrapper({
 }: BackgroundWrapperProps) {
   return (
     <div className="relative min-h-screen">
-      {/* Background Image */}
-      <div 
-        className="fixed inset-0 -z-20 bg-cover bg-center bg-no-repeat bg-attachment-fixed"
-        style={{
-          backgroundImage: `url('https://i.pinimg.com/564x/15/24/18/152418768633740511.jpg')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      />
+      {/* Background Pattern */}
+      <div className="portfolio-background fixed inset-0 -z-20" />
       
       {/* Dark Overlay for better text readability */}
       {overlay && (
