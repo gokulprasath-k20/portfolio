@@ -18,8 +18,7 @@ export function BackgroundWrapper({
       {/* Dark Overlay for better text readability */}
       {overlay && (
         <div 
-          className="fixed inset-0 -z-10 bg-background/20 backdrop-blur-sm"
-          style={{ backgroundColor: `rgba(var(--background-rgb, 0 0 0) / ${overlayOpacity * 0.3})` }}
+          className="fixed inset-0 -z-10 bg-black/60 backdrop-blur-sm"
         />
       )}
       
