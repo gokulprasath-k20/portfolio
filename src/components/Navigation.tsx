@@ -64,8 +64,8 @@ export function Navigation() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        scrolled ? "bg-background/80 backdrop-blur-md border-b border-border" : "bg-transparent"
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
+        scrolled ? "glass-card backdrop-blur-xl border-b border-white/10" : "bg-transparent"
       )}
     >
       <nav className="container mx-auto px-6 py-4">
@@ -76,11 +76,13 @@ export function Navigation() {
               e.preventDefault();
               handleNavClick('#home');
             }}
-            className="text-2xl font-bold text-white hover:text-primary transition-colors"
+            className="text-2xl font-bold text-white hover:text-primary transition-colors duration-300 tracking-tight"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            My Portfolio
+            <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              My Portfolio
+            </span>
           </motion.a>
 
           {/* Desktop Navigation */}
@@ -94,10 +96,10 @@ export function Navigation() {
                   handleNavClick(item.href);
                 }}
                 className={cn(
-                  "relative px-3 py-2 text-sm font-medium transition-colors hover:text-primary",
+                  "relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg",
                   activeSection === item.href.slice(1) 
-                    ? "text-primary" 
-                    : "text-foreground/70"
+                    ? "text-white bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-400/30" 
+                    : "text-white/80 hover:text-white hover:bg-white/5"
                 )}
                 whileHover={{ y: -2 }}
                 whileTap={{ y: 0 }}
@@ -105,8 +107,8 @@ export function Navigation() {
                 {item.name}
                 {activeSection === item.href.slice(1) && (
                   <motion.div
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"
-                    layoutId="activeSection"
+                    className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-indigo-400 rounded-full"
+                    layoutId="activeIndicator"
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   />
                 )}

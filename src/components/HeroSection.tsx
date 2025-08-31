@@ -68,8 +68,8 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-8"
           >
-            <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full bg-gradient-to-r from-primary to-purple-600 p-1">
-              <div className="w-full h-full rounded-full overflow-hidden">
+            <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-1 shadow-2xl status-online">
+              <div className="w-full h-full rounded-full overflow-hidden bg-slate-900">
                 <Image 
                   src={personal.avatar} 
                   alt={personal.name}
@@ -87,18 +87,16 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-5xl md:text-7xl font-bold mb-6"
+            className="heading-primary mb-6 text-center"
           >
-            <span className="bg-gradient-to-r from-primary via-purple-600 to-cyan-500 bg-clip-text text-transparent">
-              {personal.name}
-            </span>
+            {personal.name}
           </motion.h1>
 
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-2xl md:text-3xl font-semibold text-white mb-6"
+            className="text-2xl md:text-3xl font-semibold text-white/90 mb-6 tracking-wide"
           >
             {personal.title}
           </motion.h2>
@@ -108,7 +106,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-lg md:text-xl text-white/80 mb-12 max-w-3xl mx-auto leading-relaxed"
+            className="text-elegant mb-12 max-w-3xl mx-auto"
           >
             {personal.bio}
           </motion.p>
@@ -122,7 +120,7 @@ export function HeroSection() {
           >
             <motion.button
               onClick={handleDownloadResume}
-              className="flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full font-semibold hover:bg-primary/90 transition-colors"
+              className="btn-primary flex items-center gap-2 px-8 py-4 rounded-full font-semibold"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -136,7 +134,7 @@ export function HeroSection() {
                 e.preventDefault();
                 document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="flex items-center gap-2 border border-primary text-primary px-8 py-4 rounded-full font-semibold hover:bg-primary hover:text-primary-foreground transition-colors"
+              className="btn-secondary flex items-center gap-2 px-8 py-4 rounded-full font-semibold"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -157,14 +155,14 @@ export function HeroSection() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-full bg-accent hover:bg-primary hover:text-primary-foreground transition-colors"
+                className="p-4 rounded-xl glass-card hover-lift hover-glow transition-all duration-300"
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 + index * 0.1 }}
               >
-                <social.icon size={24} />
+                <social.icon size={24} className="text-white" />
                 <span className="sr-only">{social.label}</span>
               </motion.a>
             ))}\n          </motion.div>

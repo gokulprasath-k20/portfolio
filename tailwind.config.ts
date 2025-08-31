@@ -25,9 +25,16 @@ const config: Config = {
         },
         border: "hsl(var(--border))",
         ring: "hsl(var(--ring))",
+        // Formal theme additions
+        elegant: {
+          card: "hsl(var(--card-background))",
+          border: "hsl(var(--card-border))",
+          muted: "hsl(var(--text-muted))",
+        },
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        sans: ["var(--font-inter)", "SF Pro Display", "system-ui", "sans-serif"],
+        formal: ["Playfair Display", "serif"],
       },
       animation: {
         "fade-in": "fadeIn 0.6s ease-in-out",
