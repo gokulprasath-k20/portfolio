@@ -8,7 +8,6 @@ import { ProjectsSection } from '@/components/ProjectsSection';
 import { SkillsSection } from '@/components/SkillsSection';
 import { ExperienceSection } from '@/components/ExperienceSection';
 import { ContactSection } from '@/components/ContactSection';
-import { Footer } from '@/components/Footer';
 import { WelcomeScreen } from '@/components/WelcomeScreen';
 import { BackgroundWrapper } from '@/components/BackgroundWrapper';
 
@@ -36,7 +35,6 @@ export default function Home() {
             <ExperienceSection />
             <ContactSection />
           </main>
-          <Footer />
         </>
       )}
     </BackgroundWrapper>
