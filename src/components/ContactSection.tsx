@@ -61,15 +61,39 @@ export function ContactSection() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitted(true);
-    setIsSubmitting(false);
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "167d9351-ee23-4ef1-a78f-f5aee91d8d93",
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          from_name: formData.name,
+        }),
+      });
 
-    // Reset success state after 3 seconds
-    setTimeout(() => setIsSubmitted(false), 3000);
+      const result = await response.json();
+      if (result.success) {
+        setIsSubmitted(true);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        console.error("Error submitting form:", result);
+        alert("Submission failed: " + (result.message || "Please check your internet connection and try again."));
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("An error occurred while sending the message. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+      // Reset success state after 3 seconds
+      setTimeout(() => setIsSubmitted(false), 3000);
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

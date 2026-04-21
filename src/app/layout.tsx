@@ -29,6 +29,8 @@ export const metadata: Metadata = {
   },
 };
 
+import SmoothScroll from "@/components/SmoothScroll";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -37,9 +39,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.variable} font-sans antialiased min-h-screen bg-background text-foreground`}
+        className={`${inter.variable} font-sans antialiased min-h-screen text-foreground`}
       >
-        {children}
+        <SmoothScroll>
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   );

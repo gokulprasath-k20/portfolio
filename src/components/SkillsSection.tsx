@@ -4,8 +4,9 @@ import { SectionWrapper } from './SectionWrapper';
 
 export function SkillsSection() {
   const skills = [
-    "JavaScript", "TypeScript", "React", "Next.js", "Node.js", "Python", 
-    "HTML/CSS", "Tailwind CSS", "Git", "MongoDB", "PostgreSQL", "AWS"
+    "JavaScript", "TypeScript", "React", "Next.js", "Node.js", "Python",
+    "HTML/CSS", "Tailwind CSS", "MongoDB", "PostgreSQL", "AWS", "Adobe Photoshop",
+    "Adobe Illustrator", "Abode premiere pro", "Adobe after effects",
   ];
 
   return (
@@ -16,9 +17,9 @@ export function SkillsSection() {
           {skills.map((skill, index) => (
             <div
               key={skill}
-              className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-4 text-center border border-gray-700/50 hover:border-blue-500/50 transition-colors"
+              className="bg-white/70 backdrop-blur-sm rounded-lg p-4 text-center border border-slate-200 hover:border-primary transition-all duration-300 shadow-sm hover:shadow-md"
             >
-              <span className="text-white font-medium">{skill}</span>
+              <span className="text-foreground font-medium">{skill}</span>
             </div>
           ))}
         </div>

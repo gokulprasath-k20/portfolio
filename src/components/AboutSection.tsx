@@ -42,9 +42,9 @@ export function AboutSection() {
             About <span className="text-primary">Me</span>
           </h2>
           <p className="text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
-            I&apos;m a passionate full-stack developer with a love for creating digital experiences 
-            that make a difference. With expertise in modern web technologies, I transform 
-            ideas into reality through code.
+            I&apos;m a passionate Full Stack Developer and Creative Video Editor dedicated to 
+            crafting impactful digital experiences. I blend technical expertise with 
+            visual storytelling to transform ideas into reality.
           </p>
         </motion.div>
 
@@ -84,18 +84,21 @@ export function AboutSection() {
               <h3 className="text-2xl font-bold mb-6">My Journey</h3>
               <div className="space-y-4 text-foreground/70">
                 <p>
-                  My journey in web development started with a curiosity about how websites work. 
-                  What began as a hobby quickly became a passion, and now I&apos;m dedicated to 
-                  crafting exceptional digital experiences.
+                  My journey began with a dual passion for technology and storytelling. 
+                  As a Full Stack Developer with 6 months of focused experience, I&apos;ve 
+                  already brought over 10 diverse projects to life, blending technical 
+                  precision with creative vision.
                 </p>
                 <p>
-                  I believe in continuous learning and staying up-to-date with the latest 
-                  technologies. When I&apos;m not coding, you&apos;ll find me exploring new frameworks, 
-                  contributing to open-source projects, or mentoring aspiring developers.
+                  Currently, I&apos;m expanding my creative horizons at Trident Creative Lab as 
+                  a Video Editor. This unique combination of coding expertise and visual 
+                  storytelling allows me to approach problems from both a technical 
+                  logic and an aesthetic perspective.
                 </p>
                 <p>
-                  I&apos;m always excited to take on new challenges and collaborate with 
-                  like-minded individuals to create something amazing.
+                  Whether it&apos;s building responsive web applications with Next.js or 
+                  crafting cinematic video content, I&apos;m dedicated to delivering 
+                  high-quality digital experiences that leave a lasting impression.
                 </p>
               </div>
             </div>
@@ -103,10 +106,9 @@ export function AboutSection() {
               <h3 className="text-2xl font-bold mb-6">Quick Facts</h3>
               <div className="space-y-3">
                 {[
-                  { label: 'Experience', value: '3+ Years' },
-                  { label: 'Projects Completed', value: '25+' },
-                  { label: 'Happy Clients', value: '15+' },
-                  { label: 'Coffee Cups', value: '∞' }
+                  { label: 'Experience', value: '6 months' },
+                  { label: 'Projects Completed', value: '10+' },
+                  { label: 'Happy Clients', value: '10+' }
                 ].map((fact, index) => (
                   <motion.div
                     key={fact.label}
@@ -114,7 +116,7 @@ export function AboutSection() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="flex justify-between items-center p-3 bg-accent/50 rounded-lg"
+                    className="flex justify-between items-center p-3 bg-slate-100 rounded-lg border border-slate-200"
                   >
                     <span className="font-medium">{fact.label}:</span>
                     <span className="text-primary font-bold">{fact.value}</span>

@@ -12,30 +12,30 @@ export const portfolioData = {
   projects: [
     {
       id: "1",
-      title: "E-Commerce Platform",
-      description: "A full-featured e-commerce platform built with Next.js, featuring user authentication, payment integration, and admin dashboard.",
+      title: "Zentrix Technology",
+      description: "A professional technology solutions platform providing modern web services and digital transformation.",
       image: "/project1.jpg",
-      tags: ["Next.js", "TypeScript", "Stripe", "Prisma", "PostgreSQL"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/gokulprasath-k20/ecommerce-platform"
+      tags: ["Next.js", "Tailwind CSS", "Framer Motion", "TypeScript"],
+      liveUrl: "https://zentrix-technology.vercel.app/",
+      githubUrl: "https://github.com/gokulprasath-k20/zentrix-technology"
     },
     {
       id: "2",
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, team collaboration features, and project tracking.",
+      title: "TGStreams",
+      description: "Real-time communication and streaming platform built for seamless interaction and content sharing.",
       image: "/project2.jpg",
-      tags: ["React", "Node.js", "Socket.io", "MongoDB", "Express"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/gokulprasath-k20/task-management-app"
+      tags: ["React", "Node.js", "WebRTC", "Socket.io", "Express"],
+      liveUrl: "http://tgstreams.vercel.app/",
+      githubUrl: "https://github.com/gokulprasath-k20/tgstreams"
     },
     {
       id: "3",
-      title: "Weather Dashboard",
-      description: "A responsive weather dashboard with location-based forecasts, interactive charts, and weather alerts.",
+      title: "SkillToJob AI",
+      description: "AI-powered career development platform that bridges the gap between skills and job opportunities.",
       image: "/project3.jpg",
-      tags: ["Vue.js", "Chart.js", "OpenWeather API", "Tailwind CSS"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/gokulprasath-k20/weather-dashboard"
+      tags: ["Next.js", "AI", "OpenAI", "PostgreSQL", "TypeScript"],
+      liveUrl: "https://skilltojob-ai.vercel.app/",
+      githubUrl: "https://github.com/gokulprasath-k20/skilltojob-ai"
     }
   ] as Project[],
 
@@ -57,27 +57,16 @@ export const portfolioData = {
 
   experience: [
     {
-      company: "Tech Solutions Inc.",
-      position: "Senior Full Stack Developer",
-      period: "2022 - Present",
+      company: "Trident Creative Lab",
+      position: "Video Editor",
+      period: "2026 - Present",
       description: [
-        "Led development of multiple client projects using React and Node.js",
-        "Implemented CI/CD pipelines improving deployment efficiency by 40%",
-        "Mentored junior developers and conducted code reviews"
+        "Crafting high-quality visual content and professional video edits",
+        "Collaborating with creative teams to deliver engaging multimedia experiences",
+        "Utilizing advanced editing techniques to enhance storytelling and brand identity"
       ],
-      technologies: ["React", "Node.js", "PostgreSQL", "AWS", "Docker"]
+      technologies: ["Adobe Premiere Pro", "After Effects", "Photoshop", "Illustrator"]
     },
-    {
-      company: "StartupXYZ",
-      position: "Frontend Developer",
-      period: "2020 - 2022",
-      description: [
-        "Built responsive web applications using React and Vue.js",
-        "Collaborated with design team to implement pixel-perfect UIs",
-        "Optimized application performance resulting in 50% faster load times"
-      ],
-      technologies: ["React", "Vue.js", "JavaScript", "SCSS", "Webpack"]
-    }
   ] as Experience[],
 
   contact: {

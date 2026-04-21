@@ -1,15 +1,22 @@
 "use client";
 
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { ArrowDown, Download, Github, Linkedin, Mail } from 'lucide-react';
 import Image from 'next/image';
 import { portfolioData } from '@/data/portfolio';
 
 export function HeroSection() {
   const { personal, contact } = portfolioData;
+  const { scrollY } = useScroll();
+  
+  const skewX = useTransform(scrollY, [0, 500], [0, 5]);
+  const scaleScroll = useTransform(scrollY, [0, 500], [1, 0.9]);
+  const opacityScroll = useTransform(scrollY, [0, 500], [1, 0]);
+  
+  const smoothSkewX = useSpring(skewX, { stiffness: 100, damping: 30 });
+  const smoothScale = useSpring(scaleScroll, { stiffness: 100, damping: 30 });
 
   const handleDownloadResume = () => {
-    // You can replace this with actual resume download logic
     window.open(personal.resumeUrl, '_blank');
   };
 
@@ -32,30 +39,15 @@ export function HeroSection() {
   ];
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-purple-500/10 to-cyan-500/20" />
-        <motion.div
-          className="absolute inset-0 opacity-30"
-          animate={{
-            background: [
-              "radial-gradient(600px circle at 0% 0%, rgba(59, 130, 246, 0.3), transparent 50%)",
-              "radial-gradient(600px circle at 100% 100%, rgba(139, 92, 246, 0.3), transparent 50%)",
-              "radial-gradient(600px circle at 0% 100%, rgba(6, 182, 212, 0.3), transparent 50%)",
-              "radial-gradient(600px circle at 100% 0%, rgba(16, 185, 129, 0.3), transparent 50%)",
-            ]
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            repeatType: "reverse"
-          }}
-        />
-      </div>
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-transparent">
 
-      <div className="container mx-auto px-6 text-center">
+      <div className="w-full max-w-screen-2xl mx-auto px-6 text-center">
         <motion.div
+          style={{ 
+            skewX: smoothSkewX, 
+            scale: smoothScale,
+            opacity: opacityScroll 
+          }}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -69,7 +61,7 @@ export function HeroSection() {
             className="mb-8"
           >
             <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-1 shadow-2xl status-online">
-              <div className="w-full h-full rounded-full overflow-hidden bg-slate-900">
+              <div className="w-full h-full rounded-full overflow-hidden bg-white">
                 <Image 
                   src={personal.avatar} 
                   alt={personal.name}
@@ -96,7 +88,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-2xl md:text-3xl font-semibold text-white/90 mb-6 tracking-wide"
+            className="text-2xl md:text-3xl font-semibold text-foreground/90 mb-6 tracking-wide"
           >
             {personal.title}
           </motion.h2>
@@ -162,10 +154,11 @@ export function HeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 + index * 0.1 }}
               >
-                <social.icon size={24} className="text-white" />
+                <social.icon size={24} className="text-primary" />
                 <span className="sr-only">{social.label}</span>
               </motion.a>
-            ))}\n          </motion.div>
+            ))}
+          </motion.div>
         </motion.div>
 
         {/* Scroll Indicator */}
@@ -179,7 +172,7 @@ export function HeroSection() {
             onClick={() => {
               document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="flex flex-col items-center gap-2 text-white/70 hover:text-primary transition-colors"
+            className="flex flex-col items-center gap-2 text-foreground/70 hover:text-primary transition-colors"
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           >

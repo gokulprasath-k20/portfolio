@@ -1,6 +1,7 @@
 "use client";
 
 import { ReactNode } from 'react';
+import { AnimatedBackground } from './AnimatedBackground';
 
 interface BackgroundWrapperProps {
   children: ReactNode;
@@ -15,13 +16,7 @@ export function BackgroundWrapper({
 }: BackgroundWrapperProps) {
   return (
     <div className="relative min-h-screen">
-      {/* Dark Overlay for better text readability */}
-      {overlay && (
-        <div className="fixed inset-0 -z-10">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/70 via-slate-800/60 to-slate-900/80" />
-          <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
-        </div>
-      )}
+      <AnimatedBackground />
       
       {/* Content */}
       <div className="relative z-0">

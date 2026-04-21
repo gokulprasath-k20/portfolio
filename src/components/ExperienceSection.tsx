@@ -38,17 +38,15 @@ export function ExperienceSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className={`relative flex items-center mb-12 ${
-                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                }`}
+                className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                  }`}
               >
                 {/* Timeline Dot */}
                 <div className="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background z-10"></div>
 
                 {/* Content Card */}
-                <div className={`w-full md:w-5/12 ml-16 md:ml-0 ${
-                  index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'
-                }`}>
+                <div className={`w-full md:w-5/12 ml-16 md:ml-0 ${index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'
+                  }`}>
                   <motion.div
                     className="bg-background/90 backdrop-blur-md border border-border/50 rounded-2xl p-6 shadow-lg"
                     whileHover={{ scale: 1.02 }}
@@ -75,9 +73,9 @@ export function ExperienceSection() {
                             key={descIndex}
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ 
-                              duration: 0.6, 
-                              delay: index * 0.2 + descIndex * 0.1 
+                            transition={{
+                              duration: 0.6,
+                              delay: index * 0.2 + descIndex * 0.1
                             }}
                             viewport={{ once: true }}
                             className="text-foreground/70 text-sm leading-relaxed flex items-start gap-2"
@@ -117,13 +115,13 @@ export function ExperienceSection() {
           viewport={{ once: true }}
           className="mt-16 max-w-4xl mx-auto"
         >
-          <div className="bg-secondary/50 backdrop-blur-md rounded-2xl p-8 border border-border/50">
+          <div className="bg-slate-50 backdrop-blur-md rounded-2xl p-8 border border-slate-200">
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-4">Education & Learning</h3>
               <p className="text-foreground/70 leading-relaxed">
-                I hold a degree in Computer Science and continuously expand my knowledge through 
-                online courses, workshops, and hands-on projects. I believe that learning never stops, 
-                especially in the rapidly evolving world of technology.
+                I am currently pursuing a B.Tech in Information Technology and continuously
+                expanding my knowledge through online courses, workshops, and hands-on projects.
+                I believe that learning never stops, especially in the rapidly evolving world of technology.
               </p>
             </div>
           </div>

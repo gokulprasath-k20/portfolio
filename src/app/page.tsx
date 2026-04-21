@@ -11,6 +11,8 @@ import { ContactSection } from '@/components/ContactSection';
 import { WelcomeScreen } from '@/components/WelcomeScreen';
 import { BackgroundWrapper } from '@/components/BackgroundWrapper';
 
+import { PerspectiveSection } from '@/components/PerspectiveSection';
+
 export default function Home() {
   const [showWelcome, setShowWelcome] = useState(true);
 
@@ -29,11 +31,23 @@ export default function Home() {
           <Navigation />
           <main>
             <HeroSection />
-            <AboutSection />
+            <PerspectiveSection>
+              <AboutSection />
+            </PerspectiveSection>
+            
             <ProjectsSection />
-            <SkillsSection />
-            <ExperienceSection />
-            <ContactSection />
+            
+            <PerspectiveSection>
+              <SkillsSection />
+            </PerspectiveSection>
+            
+            <PerspectiveSection>
+              <ExperienceSection />
+            </PerspectiveSection>
+            
+            <PerspectiveSection>
+              <ContactSection />
+            </PerspectiveSection>
           </main>
         </>
       )}

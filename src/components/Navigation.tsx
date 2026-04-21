@@ -76,11 +76,11 @@ export function Navigation() {
               e.preventDefault();
               handleNavClick('#home');
             }}
-            className="text-2xl font-bold text-white hover:text-primary transition-colors duration-300 tracking-tight"
+            className="text-2xl font-bold text-foreground hover:text-primary transition-colors duration-300 tracking-tight"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
               My Portfolio
             </span>
           </motion.a>
@@ -98,8 +98,8 @@ export function Navigation() {
                 className={cn(
                   "relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg",
                   activeSection === item.href.slice(1) 
-                    ? "text-white bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-400/30" 
-                    : "text-white/80 hover:text-white hover:bg-white/5"
+                    ? "text-primary bg-primary/10 border border-primary/20" 
+                    : "text-foreground/70 hover:text-primary hover:bg-slate-100"
                 )}
                 whileHover={{ y: -2 }}
                 whileTap={{ y: 0 }}
