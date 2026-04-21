@@ -21,7 +21,7 @@ export function ExperienceSection() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Work <span className="text-primary">Experience</span>
           </h2>
-          <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
+          <p className="text-xl text-foreground max-w-3xl mx-auto">
             My professional journey and the experiences that have shaped my development career.
           </p>
         </motion.div>
@@ -58,11 +58,8 @@ export function ExperienceSection() {
                       </div>
                       <div className="flex-1">
                         <h3 className="text-xl font-bold text-primary">{exp.position}</h3>
-                        <h4 className="text-lg font-semibold text-foreground/80">{exp.company}</h4>
-                        <div className="flex items-center gap-2 text-foreground/60 mt-1">
-                          <Calendar size={16} />
+                        <h4 className="text-lg font-semibold text-foreground">{exp.company}</h4>
                           <span className="text-sm">{exp.period}</span>
-                        </div>
                       </div>
                     </div>
 
@@ -78,7 +75,7 @@ export function ExperienceSection() {
                               delay: index * 0.2 + descIndex * 0.1
                             }}
                             viewport={{ once: true }}
-                            className="text-foreground/70 text-sm leading-relaxed flex items-start gap-2"
+                            className="text-foreground text-sm leading-relaxed flex items-start gap-2"
                           >
                             <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></span>
                             {desc}
@@ -118,7 +115,7 @@ export function ExperienceSection() {
           <div className="bg-slate-50 backdrop-blur-md rounded-2xl p-8 border border-slate-200">
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-4">Education & Learning</h3>
-              <p className="text-foreground/70 leading-relaxed">
+              <p className="text-foreground leading-relaxed">
                 I am currently pursuing a B.Tech in Information Technology and continuously
                 expanding my knowledge through online courses, workshops, and hands-on projects.
                 I believe that learning never stops, especially in the rapidly evolving world of technology.

@@ -28,7 +28,7 @@ export function ProjectsSection() {
             <h2 className="text-5xl md:text-7xl font-bold mb-4">
               Selected <span className="text-primary italic">Works</span>
             </h2>
-            <p className="text-xl text-foreground/60 max-w-2xl">
+            <p className="text-xl text-foreground max-w-2xl">
               A curated collection of digital experiences and solutions.
             </p>
           </motion.div>
@@ -62,7 +62,7 @@ export function ProjectsSection() {
                     </div>
                   </div>
                   <h3 className="text-3xl font-bold mb-4 group-hover:text-primary transition-colors">{project.title}</h3>
-                  <p className="text-foreground/70 leading-relaxed max-w-md">
+                  <p className="text-foreground leading-relaxed max-w-md">
                     {project.description}
                   </p>
                 </div>
@@ -70,7 +70,7 @@ export function ProjectsSection() {
                 <div>
                   <div className="flex flex-wrap gap-2 mb-8">
                     {project.tags.map((tag) => (
-                      <span key={tag} className="px-4 py-1.5 text-xs font-semibold bg-slate-100 border border-slate-200 rounded-full text-foreground/80">
+                      <span key={tag} className="px-4 py-1.5 text-xs font-semibold bg-slate-100 border border-slate-200 rounded-full text-foreground">
                         {tag}
                       </span>
                     ))}

@@ -16,7 +16,7 @@
   /* Formal theme colors - Light Mode */
   --card-background: #ffffff;
   --card-border: #e2e8f0;
-  --text-muted: #64748b;
+  --text-muted: #000000;
   --gradient-primary: linear-gradient(135deg, #4f46e5 0%, #7c3AED 100%);
   --gradient-secondary: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
 }
@@ -46,11 +46,11 @@ body {
 }
 
 .text-foreground\/70 {
-  color: rgba(0, 0, 0, 0.9);
+  color: #000000;
 }
 
 .text-foreground\/60 {
-  color: rgba(0, 0, 0, 0.85);
+  color: #000000;
 }
 
 .text-primary {
@@ -260,7 +260,7 @@ html {
 }
 
 .text-muted-elegant {
-  color: rgba(0, 0, 0, 0.8);
+  color: #000000;
   font-size: 1rem;
   font-weight: 500;
 }

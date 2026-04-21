@@ -116,7 +116,7 @@ export function ContactSection() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Get In <span className="text-primary">Touch</span>
           </h2>
-          <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
+          <p className="text-xl text-foreground max-w-3xl mx-auto">
             I&apos;m always interested in new opportunities and interesting projects. 
             Let&apos;s discuss how we can work together!
           </p>
@@ -133,7 +133,7 @@ export function ContactSection() {
           >
             <div>
               <h3 className="text-2xl font-bold mb-6">Let&apos;s Connect</h3>
-              <p className="text-foreground/70 leading-relaxed mb-8">
+              <p className="text-foreground leading-relaxed mb-8">
                 Whether you have a project in mind, want to discuss opportunities, 
                 or just want to say hello, I&apos;d love to hear from you. Feel free to 
                 reach out through any of the channels below.
@@ -158,12 +158,12 @@ export function ContactSection() {
                     {info.href ? (
                       <a
                         href={info.href}
-                        className="text-foreground/70 hover:text-primary transition-colors"
+                        className="text-foreground hover:text-primary transition-colors"
                       >
                         {info.value}
                       </a>
                     ) : (
-                      <p className="text-foreground/70">{info.value}</p>
+                      <p className="text-foreground">{info.value}</p>
                     )}
                   </div>
                 </motion.div>
@@ -214,7 +214,7 @@ export function ContactSection() {
               >
                 <CheckCircle size={64} className="text-green-500 mx-auto mb-4" />
                 <h4 className="text-xl font-bold mb-2">Message Sent!</h4>
-                <p className="text-foreground/70">Thank you for reaching out. I&apos;ll get back to you soon.</p>
+                <p className="text-foreground">Thank you for reaching out. I&apos;ll get back to you soon.</p>
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">

@@ -41,7 +41,7 @@ export function AboutSection() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             About <span className="text-primary">Me</span>
           </h2>
-          <p className="text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-foreground max-w-3xl mx-auto leading-relaxed">
             I&apos;m a passionate Full Stack Developer and Creative Video Editor dedicated to 
             crafting impactful digital experiences. I blend technical expertise with 
             visual storytelling to transform ideas into reality.
@@ -66,7 +66,7 @@ export function AboutSection() {
                 <feature.icon size={32} />
               </motion.div>
               <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-              <p className="text-foreground/70 leading-relaxed">{feature.description}</p>
+              <p className="text-foreground leading-relaxed">{feature.description}</p>
             </motion.div>
           ))}
         </div>
@@ -82,7 +82,7 @@ export function AboutSection() {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl font-bold mb-6">My Journey</h3>
-              <div className="space-y-4 text-foreground/70">
+              <div className="space-y-4 text-foreground">
                 <p>
                   My journey began with a dual passion for technology and storytelling. 
                   As a Full Stack Developer with 6 months of focused experience, I&apos;ve 

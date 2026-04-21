@@ -99,7 +99,7 @@ export function Navigation() {
                   "relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg",
                   activeSection === item.href.slice(1) 
                     ? "text-primary bg-primary/10 border border-primary/20" 
-                    : "text-foreground/70 hover:text-primary hover:bg-slate-100"
+                    : "text-foreground hover:text-primary hover:bg-slate-100"
                 )}
                 whileHover={{ y: -2 }}
                 whileTap={{ y: 0 }}
@@ -119,7 +119,7 @@ export function Navigation() {
           {/* Mobile Navigation Toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-foreground/70 hover:text-primary transition-colors"
+            className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -145,7 +145,7 @@ export function Navigation() {
                   "block px-4 py-3 text-sm font-medium transition-colors hover:text-primary hover:bg-accent/50 rounded-md",
                   activeSection === item.href.slice(1) 
                     ? "text-primary bg-accent/30" 
-                    : "text-foreground/70"
+                    : "text-foreground"
                 )}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}

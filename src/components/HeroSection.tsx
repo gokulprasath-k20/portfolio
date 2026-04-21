@@ -88,7 +88,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-2xl md:text-3xl font-semibold text-foreground/90 mb-6 tracking-wide"
+            className="text-2xl md:text-3xl font-semibold text-foreground mb-6 tracking-wide"
           >
             {personal.title}
           </motion.h2>
@@ -172,7 +172,7 @@ export function HeroSection() {
             onClick={() => {
               document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="flex flex-col items-center gap-2 text-foreground/70 hover:text-primary transition-colors"
+            className="flex flex-col items-center gap-2 text-foreground hover:text-primary transition-colors"
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           >

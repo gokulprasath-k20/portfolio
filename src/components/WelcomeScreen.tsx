@@ -61,7 +61,7 @@ export function WelcomeScreen({ onComplete }: WelcomeScreenProps) {
             >
               <SplitText
                 text="Hello, you"
-                className="text-4xl md:text-6xl lg:text-7xl font-bold text-center"
+                className="text-4xl md:text-6xl lg:text-7xl font-bold text-center text-white"
                 delay={150}
                 duration={0.8}
                 ease="power3.out"
@@ -78,7 +78,7 @@ export function WelcomeScreen({ onComplete }: WelcomeScreenProps) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 2 }}
-              className="text-lg md:text-xl text-foreground/70"
+              className="text-lg md:text-xl text-white/70"
             >
               Welcome to my portfolio
             </motion.div>
