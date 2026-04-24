@@ -36,6 +36,15 @@ export const portfolioData = {
       tags: ["Next.js", "AI", "OpenAI", "PostgreSQL", "TypeScript"],
       liveUrl: "https://skilltojob-ai.vercel.app/",
       githubUrl: "https://github.com/gokulprasath-k20/skilltojob-ai"
+    },
+    {
+      id: "4",
+      title: "AVS Nexus",
+      description: "A modular student skill evaluation platform with a real-time coding environment, multi-role access (student/admin/super admin), dynamic modules, partial scoring, and advanced admin controls including filtering and activity tracking.",
+      image: "/project4.jpg",
+      tags: ["Next.js", "MongoDB", "TypeScript", "Node.js", "Real-time"],
+      liveUrl: "https://avsnexus.vercel.app",
+      githubUrl: ""
     }
   ] as Project[],
 

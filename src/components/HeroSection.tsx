@@ -61,13 +61,13 @@ export function HeroSection() {
             className="mb-8"
           >
             <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-1 shadow-2xl status-online">
-              <div className="w-full h-full rounded-full overflow-hidden bg-white">
+              <div className="w-full h-full rounded-full overflow-hidden bg-white p-2">
                 <Image 
                   src={personal.avatar} 
                   alt={personal.name}
                   width={160}
                   height={160}
-                  className="w-full h-full object-cover rounded-full"
+                  className="w-full h-full object-cover rounded-full transition-transform duration-500 hover:scale-110"
                   priority
                 />
               </div>
