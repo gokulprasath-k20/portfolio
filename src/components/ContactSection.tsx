@@ -62,7 +62,7 @@ export function ContactSection() {
     e.preventDefault();
     setIsSubmitting(true);
     setError(null);
-    
+
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -79,7 +79,7 @@ export function ContactSection() {
           from_name: formData.name,
         }),
       });
- 
+
       const result = await response.json();
       if (result.success) {
         setIsSubmitted(true);
@@ -119,7 +119,7 @@ export function ContactSection() {
             Get In <span className="text-primary">Touch</span>
           </h2>
           <p className="text-xl text-foreground max-w-3xl mx-auto">
-            I&apos;m always interested in new opportunities and interesting projects. 
+            I&apos;m always interested in new opportunities and interesting projects.
             Let&apos;s discuss how we can work together!
           </p>
         </motion.div>
@@ -136,9 +136,8 @@ export function ContactSection() {
             <div>
               <h3 className="text-2xl font-bold mb-6">Let&apos;s Connect</h3>
               <p className="text-foreground leading-relaxed mb-8">
-                Whether you have a project in mind, want to discuss opportunities, 
-                or just want to say hello, I&apos;d love to hear from you. Feel free to 
-                reach out through any of the channels below.
+                Whether you have a project in mind, want to discuss opportunities, or just want to say hello, I'd love to hear from you.
+                I'm also available for freelance work, so feel free to reach out anytime.
               </p>
             </div>
 
@@ -207,7 +206,7 @@ export function ContactSection() {
             className="bg-background/90 backdrop-blur-md rounded-2xl p-8 border border-border/50 shadow-lg"
           >
             <h3 className="text-2xl font-bold mb-6">Send me a message</h3>
-            
+
             {isSubmitted ? (
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -252,7 +251,7 @@ export function ContactSection() {
                     />
                   </div>
                 </div>
-                
+
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium mb-2">
                     Subject
@@ -268,7 +267,7 @@ export function ContactSection() {
                     placeholder="What&apos;s this about?"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium mb-2">
                     Message
@@ -284,7 +283,7 @@ export function ContactSection() {
                     placeholder="Tell me about your project or say hello..."
                   />
                 </div>
-                
+
                 {error && (
                   <motion.div
                     initial={{ opacity: 0, height: 0 }}

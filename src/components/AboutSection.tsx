@@ -42,8 +42,8 @@ export function AboutSection() {
             About <span className="text-primary">Me</span>
           </h2>
           <p className="text-xl text-foreground max-w-3xl mx-auto leading-relaxed">
-            I&apos;m a passionate Full Stack Developer and Creative Video Editor dedicated to 
-            crafting impactful digital experiences. I blend technical expertise with 
+            I&apos;m a passionate Full Stack Developer and Creative Video Editor dedicated to
+            crafting impactful digital experiences. I blend technical expertise with
             visual storytelling to transform ideas into reality.
           </p>
         </motion.div>
@@ -84,21 +84,13 @@ export function AboutSection() {
               <h3 className="text-2xl font-bold mb-6">My Journey</h3>
               <div className="space-y-4 text-foreground">
                 <p>
-                  My journey began with a dual passion for technology and storytelling. 
-                  As a Full Stack Developer with 6 months of focused experience, I&apos;ve 
-                  already brought over 10 diverse projects to life, blending technical 
-                  precision with creative vision.
+                  My journey began with a strong passion for both technology and storytelling. I have hands-on experience working as a Video Editor for the past 6 months at Trident Creative Lab, where I’ve developed a keen eye for visual storytelling and creative content
                 </p>
                 <p>
-                  Currently, I&apos;m expanding my creative horizons at Trident Creative Lab as 
-                  a Video Editor. This unique combination of coding expertise and visual 
-                  storytelling allows me to approach problems from both a technical 
-                  logic and an aesthetic perspective.
+                  Alongside that, I work as a freelance Full Stack Developer, building and experimenting with web applications. I’ve independently developed several projects using modern technologies like Next.js, focusing on creating responsive and user-friendly experiences.
                 </p>
                 <p>
-                  Whether it&apos;s building responsive web applications with Next.js or 
-                  crafting cinematic video content, I&apos;m dedicated to delivering 
-                  high-quality digital experiences that leave a lasting impression.
+                  This combination of development and video editing allows me to approach projects with both technical precision and creative thinking, helping me build digital experiences that are both functional and visually engaging.
                 </p>
               </div>
             </div>

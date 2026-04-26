@@ -8,12 +8,12 @@ import { portfolioData } from '@/data/portfolio';
 export function ProjectsSection() {
   const targetRef = useRef<HTMLDivElement>(null);
   const { projects } = portfolioData;
-  
+
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-60%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"]);
 
   return (
     <section id="projects" ref={targetRef} className="relative h-[400vh] bg-transparent">
@@ -43,7 +43,7 @@ export function ProjectsSection() {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-purple-500/10" />
-              
+
               <div className="relative h-full p-8 flex flex-col justify-between">
                 <div>
                   <div className="flex justify-between items-start mb-6">
