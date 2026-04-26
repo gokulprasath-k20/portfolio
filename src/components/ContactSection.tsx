@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { portfolioData } from '@/data/portfolio';
 import { SectionWrapper } from './SectionWrapper';
 
@@ -15,6 +15,7 @@ export function ContactSection() {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const { contact } = portfolioData;
 
@@ -60,6 +61,7 @@ export function ContactSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
     
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -69,7 +71,7 @@ export function ContactSection() {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: "167d9351-ee23-4ef1-a78f-f5aee91d8d93",
+          access_key: "26e27d5c-aafa-44a0-beec-57cc0521e0e6",
           name: formData.name,
           email: formData.email,
           subject: formData.subject,
@@ -77,18 +79,18 @@ export function ContactSection() {
           from_name: formData.name,
         }),
       });
-
+ 
       const result = await response.json();
       if (result.success) {
         setIsSubmitted(true);
         setFormData({ name: '', email: '', subject: '', message: '' });
       } else {
-        console.error("Error submitting form:", result);
-        alert("Submission failed: " + (result.message || "Please check your internet connection and try again."));
+        console.error("Web3Forms Submission Error:", result);
+        setError(result.message || "Submission failed. Please check your internet connection and try again.");
       }
     } catch (error) {
-      console.error("Error submitting form:", error);
-      alert("An error occurred while sending the message. Please try again later.");
+      console.error("Network or Form Error:", error);
+      setError("An error occurred while sending the message. Please try again later.");
     } finally {
       setIsSubmitting(false);
       // Reset success state after 3 seconds
@@ -283,6 +285,17 @@ export function ContactSection() {
                   />
                 </div>
                 
+                {error && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    className="flex items-center gap-2 text-red-500 bg-red-500/10 p-4 rounded-lg text-sm"
+                  >
+                    <AlertCircle size={18} />
+                    <span>{error}</span>
+                  </motion.div>
+                )}
+
                 <motion.button
                   type="submit"
                   disabled={isSubmitting}

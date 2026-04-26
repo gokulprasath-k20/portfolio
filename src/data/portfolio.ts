@@ -44,7 +44,16 @@ export const portfolioData = {
       image: "/project4.jpg",
       tags: ["Next.js", "MongoDB", "TypeScript", "Node.js", "Real-time"],
       liveUrl: "https://avsnexus.vercel.app",
-      githubUrl: ""
+      githubUrl: "https://github.com/gokulprasath-k20/avsnexus"
+    },
+    {
+      id: "5",
+      title: "TG Fun Hub",
+      description: "A premium, mobile-first social media platform with an immersive, Instagram-style experience. Features real-time feeds, swipeable reels, music streaming, integrated e-commerce, and an intelligent Gemini AI concierge bot.",
+      image: "/project5.jpg",
+      tags: ["Next.js", "React", "MongoDB", "Tailwind CSS", "Cloudinary", "Gemini AI"],
+      liveUrl: "https://tgfunhub.vercel.app/",
+      githubUrl: "https://github.com/gokulprasath-k20/tgfunhub"
     }
   ] as Project[],
 
