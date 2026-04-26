@@ -136,8 +136,8 @@ export function ContactSection() {
             <div>
               <h3 className="text-2xl font-bold mb-6">Let&apos;s Connect</h3>
               <p className="text-foreground leading-relaxed mb-8">
-                Whether you have a project in mind, want to discuss opportunities, or just want to say hello, I'd love to hear from you.
-                I'm also available for freelance work, so feel free to reach out anytime.
+                Whether you have a project in mind, want to discuss opportunities, or just want to say hello, I&apos;d love to hear from you.
+                I&apos;m also available for freelance work, so feel free to reach out anytime.
               </p>
             </div>
 

@@ -10,9 +10,7 @@ interface BackgroundWrapperProps {
 }
 
 export function BackgroundWrapper({ 
-  children, 
-  overlay = true, 
-  overlayOpacity = 0.8 
+  children 
 }: BackgroundWrapperProps) {
   return (
     <div className="relative min-h-screen">

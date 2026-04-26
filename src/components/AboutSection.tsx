@@ -84,10 +84,10 @@ export function AboutSection() {
               <h3 className="text-2xl font-bold mb-6">My Journey</h3>
               <div className="space-y-4 text-foreground">
                 <p>
-                  My journey began with a strong passion for both technology and storytelling. I have hands-on experience working as a Video Editor for the past 6 months at Trident Creative Lab, where I’ve developed a keen eye for visual storytelling and creative content
+                  My journey began with a strong passion for both technology and storytelling. I have hands-on experience working as a Video Editor for the past 6 months at Trident Creative Lab, where I&apos;ve developed a keen eye for visual storytelling and creative content
                 </p>
                 <p>
-                  Alongside that, I work as a freelance Full Stack Developer, building and experimenting with web applications. I’ve independently developed several projects using modern technologies like Next.js, focusing on creating responsive and user-friendly experiences.
+                  Alongside that, I work as a freelance Full Stack Developer, building and experimenting with web applications. I&apos;ve independently developed several projects using modern technologies like Next.js, focusing on creating responsive and user-friendly experiences.
                 </p>
                 <p>
                   This combination of development and video editing allows me to approach projects with both technical precision and creative thinking, helping me build digital experiences that are both functional and visually engaging.
